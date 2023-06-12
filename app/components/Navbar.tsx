@@ -23,19 +23,32 @@ export default function Navbar() {
           <LuAlignRight size={30} className="cursor-pointer" />
         )}
         {activeMenu && (
-          <div className="absolute top-20 text-center right-3 bg-white px-5 py-3 rounded-md shadow-md z-20">
-            <ul className="text-xl w-24">
+          <div className="absolute top-10 right-0 bg-white px-6 py-3 rounded-md shadow-lg z-20 w-40">
+            <ul className="text-xl font-medium text-center">
               <Link href="/">
-                <li className="cursor-pointer">Home</li>
+                <li className="cursor-pointer text-2xl py-1 hover:text-stone-600">
+                  Home
+                </li>
               </Link>
               <Link href="/pricing">
-                <li className="cursor-pointer">Pricing</li>
+                <li className="cursor-pointer text-2xl py-1 hover:text-stone-600">
+                  Pricing
+                </li>
               </Link>
               <Link href="/ourwork">
-                <li className="cursor-pointer">Our Work</li>
+                <li className="cursor-pointer text-2xl py-1 hover:text-stone-600">
+                  Our Work
+                </li>
+              </Link>
+              <Link href="/faq">
+                <li className="cursor-pointer text-2xl py-1 hover:text-stone-600">
+                  FAQ
+                </li>
               </Link>
               <Link href="/contact">
-                <li className="cursor-pointer">Contact</li>
+                <li className="cursor-pointer text-2xl py-1 hover:text-stone-600">
+                  Contact
+                </li>
               </Link>
             </ul>
           </div>
