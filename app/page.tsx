@@ -1,37 +1,12 @@
 "use client"
-import { useState } from "react"
-import { LuMenu, LuAlignRight } from "react-icons/lu"
 import droneVideo from "../public/assets/droneVideo.mp4"
+import Link from "next/link"
+import Navbar from "./components/Navbar"
 
 export default function Home() {
-  const [activeMenu, setActiveMenu] = useState(false)
   return (
     <main className="min-h-screen bg-gray-200">
-      <nav className="bg-gray-100 py-4 px-8 flex items-center justify-between shadow-md fixed top-0 z-20 w-full bg-opacity-60">
-        <h1 className="text-2xl font-semibold cursor-pointer select-none">
-          OtterDrone
-        </h1>
-        <div
-          onClick={() => setActiveMenu((prev) => !prev)}
-          className="relative"
-        >
-          {!activeMenu ? (
-            <LuMenu size={30} className="cursor-pointer" />
-          ) : (
-            <LuAlignRight size={30} className="cursor-pointer" />
-          )}
-          {activeMenu && (
-            <div className="absolute top-20 text-center right-3 bg-white px-5 py-3 rounded-md shadow-md z-20">
-              <ul className="text-xl space-y-3 w-24">
-                <li className="cursor-pointer">Home</li>
-                <li className="cursor-pointer">Pricing</li>
-                <li className="cursor-pointer">Our Work</li>
-                <li className="cursor-pointer">Contact</li>
-              </ul>
-            </div>
-          )}
-        </div>
-      </nav>
+      <Navbar />
       <section className="relative shadow-sm">
         <video className="object-cover w-full min-h-screen" autoPlay muted loop>
           <source src={droneVideo} type="video/mp4" />
@@ -75,9 +50,11 @@ export default function Home() {
           Check out our Pricing Packages
         </h2>
         <div className="flex justify-center py-6">
-          <button className="bg-blue-500 py-2 px-8 rounded-md text-white text-lg font-medium shadow-lg hover:scale-105 transition-all">
-            Visit Pricing
-          </button>
+          <Link href="/pricing">
+            <button className="bg-blue-500 py-2 px-8 rounded-md text-white text-lg font-medium shadow-lg hover:scale-105 transition-all">
+              Visit Pricing
+            </button>
+          </Link>
         </div>
       </section>
       <footer className="text-center py-2">

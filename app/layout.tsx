@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar"
 import "./globals.css"
 import { Inter, Cabin } from "next/font/google"
 
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cabin.className}>{children}</body>
+      <body className={cabin.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
