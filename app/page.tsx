@@ -1,12 +1,10 @@
 "use client"
 import droneVideo from "../public/assets/droneVideo.mp4"
 import Link from "next/link"
-import Navbar from "./components/Navbar"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-200">
-      <Navbar />
       <section className="relative shadow-sm">
         <video className="object-cover w-full min-h-screen" autoPlay muted loop>
           <source src={droneVideo} type="video/mp4" />
@@ -52,7 +50,7 @@ export default function Home() {
         <div className="flex justify-center py-6">
           <Link href="/pricing">
             <button className="bg-blue-500 py-2 px-8 rounded-md text-white text-lg font-medium shadow-lg hover:scale-105 transition-all">
-              Visit Pricing
+              View Pricing
             </button>
           </Link>
         </div>
