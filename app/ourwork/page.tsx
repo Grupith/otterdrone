@@ -13,6 +13,12 @@ export default function Ourwork() {
       body: "We got beatiful photos and videos of the holy hill church and surrounding areas.",
       photoURL: "https://www.holyhill.com/images/stories/Aerial-1.png",
     },
+    {
+      title: "Real Estate Package",
+      body: "This is real estate project we contributed on. It helped the property sell faster then others in the area.",
+      photoURL:
+        "https://cdn.landsearch.com/listings/4sCHB/large/de-pere-wi-103416492.jpg",
+    },
   ]
   return (
     <div className="pt-16 bg-gradient-to-tr from-gray-300 to-stone-300 min-h-screen">
