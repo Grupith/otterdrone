@@ -7,7 +7,7 @@ import logo from "../../public/assets/favicon.png"
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(false)
   return (
-    <nav className="bg-gray-100 py-4 px-8 flex items-center justify-between shadow-md fixed top-0 z-20 w-full bg-opacity-75">
+    <nav className="bg-gray-100 py-3 px-8 flex items-center justify-between shadow-md fixed top-0 z-20 w-full bg-opacity-75">
       <Link href="/">
         <div className="flex items-center">
           <h1 className="text-2xl font-semibold cursor-pointer select-none">

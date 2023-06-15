@@ -28,17 +28,25 @@ export default function Ourwork() {
       <h1 className="text-center text-4xl mt-10 mb-5 font-semibold">
         Our Work
       </h1>
-      <section className="px-6 py-6 space-y-6">
+      <h2 className="text-center text-xl mt-10 mb-5 font-semibold">
+        Check out some of our finished projects!
+      </h2>
+      <section className="px-6 py-6 space-y-6 sm:flex sm:justify-around sm:flex-wrap">
         {totalProjects.map((project) => (
-          <div key={project.title} className="bg-white shadow-lg rounded-lg">
-            <img src={project.photoURL} className="rounded-md" />
+          <div
+            key={project.title}
+            className="bg-white shadow-lg rounded-lg md:w-96"
+          >
+            <div>
+              <img src={project.photoURL} className="scale-105 rounded-md" />
+            </div>
             <h2 className="text-xl font-bold text-center py-4">
               {project.title}
             </h2>
             <h3 className="text-center text-sm font-medium text-gray-800 pb-2">
               - {project.location} -
             </h3>
-            <p className="text-center">{project.body}</p>
+            <p className="text-center text-sm px-4">{project.body}</p>
             <div className="flex justify-center py-4">
               <button className="bg-blue-500 py-1 px-6 rounded-md text-white text-md font-normal shadow-lg hover:scale-105 transition-all">
                 View Project
