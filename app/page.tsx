@@ -1,17 +1,22 @@
 "use client"
 import droneVideo from "../public/assets/droneVideo.mp4"
 import Link from "next/link"
+import VideoPlayer from "./components/VideoPlayer"
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="min-h-screen bg-gray-200">
-      <section className="relative shadow-sm">
-        <video className="object-cover w-full min-h-screen" autoPlay muted loop>
-          <source src={droneVideo} type="video/mp4" />
-        </video>
-        <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-32 text-4xl font-bold">
-          Give your business a new look!
+    <main className="min-h-screen pt-20">
+      <section className="text-center text-xl font-semibold">
+        <h2 className="text-4xl font-light py-10">
+          Drone Photography & Videography Services
         </h2>
+
+        <div className="flex justify-center">
+          <VideoPlayer />
+        </div>
+        <p className="text-center text-3xl font-light py-12">
+          - Located in <span className="font-bold">Wisconsin</span> -
+        </p>
       </section>
       <section className="py-4">
         <h1 className="text-center text-4xl font-semibold py-8">
@@ -29,9 +34,6 @@ export default function Home() {
             <li className="font-semibold">Custom Projects</li>
           </ul>
         </div>
-        <p className="text-center text-xl font-medium text-gray-600">
-          - Located in Southeast Wisconsin -
-        </p>
       </section>
       <section className="mt-2">
         <h1 className="text-center text-4xl font-semibold py-2">
@@ -58,3 +60,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
