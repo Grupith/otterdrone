@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={cabin.className}>
         <Navbar />
         {children}
-        <footer className="text-center py-2 bg-gray-200">
+        <footer className="text-center py-2 bg-gradient-to-r from-white to-stone-200">
           <p>© 2023 OtterDrone LLC. All rights reserved.</p>
         </footer>
       </body>
