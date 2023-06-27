@@ -1,6 +1,6 @@
 import Link from "next/link"
 import React from "react"
-import { IoCheckmarkSharp } from "react-icons/io5"
+import { Card } from "../components/Card"
 
 interface Card {
   id: string
@@ -16,7 +16,7 @@ export default function Pricing() {
       id: "p1",
       title: "Real Estate",
       subtitle: "Basic",
-      price: "$249",
+      price: "$299",
       features: [
         "Interior Video Tour",
         "Exterior Aerial Photos",
@@ -44,8 +44,8 @@ export default function Pricing() {
         "Market Your Business",
         "Attract New Employees",
         "1-4 Minute Video",
-        "Professionally Edited",
-        "Companies, Restaurants, Golf Courses, Shops, Etc.",
+        "Businesses, Restaurants, Golf Course",
+        "Golf Courses, Stores, Etc.",
       ],
     },
     {
@@ -55,9 +55,9 @@ export default function Pricing() {
       price: "$899",
       features: [
         "Capture Event Highlights",
-        "Professionally edited",
         "1-10 Minute Video",
-        "Corporate Events, Weddings, Parades, Concerts, Etc.",
+        "Weddings, Parades, Concerts",
+        "Corporate Events, Gatherings.",
       ],
     },
     {
@@ -83,30 +83,29 @@ export default function Pricing() {
       <div className="flex justify-center my-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {PricingCards.map((card) => (
-            <div
-              key={card.id}
-              className="white border border-black/10 rounded-lg bg-gray-100 w-96 h-full py-8 px-8 space-y-4 shadow-lg"
-            >
-              <h2 className="text-center text-4xl font-medium">{card.title}</h2>
-              <h3 className="text-center text-xl font-light">
-                {card.subtitle}
-              </h3>
-              <p className="text-center text-5xl font-semibold">{card.price}</p>
-              {card.features.map((feature) => (
-                <div key={feature} className="flex items-center text-xl">
-                  <IoCheckmarkSharp />
-                  <span className="ml-2">{feature}</span>
-                </div>
-              ))}
-              <div className="flex justify-center py-2">
-                <button className="text-lg text-white font-light rounded-md bg-gradient-to-tr from-blue-500 to-blue-600 py-1 px-12 hover:scale-105 transition-all">
-                  Start Package
-                </button>
-              </div>
-            </div>
+            <Card
+              id={card.id}
+              title={card.title}
+              subtitle={card.subtitle}
+              features={card.features}
+              price={card.price}
+            />
           ))}
         </div>
       </div>
+      <section className="flex justify-center space-x-2 text-xl my-10">
+        <p className="font-semibold">Got Questions?</p>
+        <p>
+          Visit our{" "}
+          <Link
+            href="/faq"
+            className="text-blue-700 font-normal hover:text-blue-500"
+          >
+            FAQ
+          </Link>{" "}
+          Page
+        </p>
+      </section>
     </div>
   )
 }
