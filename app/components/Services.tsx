@@ -44,7 +44,10 @@ export const Services = () => {
   return (
     <ul className="flex justify-around">
       {servicesOffered.map((service) => (
-        <div className="border border-black/30 flex flex-col justify-center items-center rounded-lg w-60 py-4 shadow-lg">
+        <div
+          key={service.title}
+          className="border border-black/30 flex flex-col justify-center items-center rounded-lg w-60 py-4 shadow-lg"
+        >
           <Image src={service.img.src} alt={service.img.alt} />
           <h1 className="text-xl font-semibold">{service.title}</h1>
           <p className="text-center">{service.info}</p>
