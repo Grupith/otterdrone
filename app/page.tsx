@@ -17,13 +17,11 @@ const Home = () => {
         </div>
       </section>
       <section className="py-4">
-        <h2 className="text-center text-4xl font-medium py-4">
-          Services We Offer
-        </h2>
+        <h2 className="text-center text-4xl font-normal my-10">Our Services</h2>
         <Services />
       </section>
       <section className="pb-4">
-        <h2 className="text-center text-4xl font-medium mt-6">
+        <h2 className="text-center text-4xl font-normal my-10">
           Why choose us?
         </h2>
 
@@ -53,7 +51,7 @@ const Home = () => {
         </p>
       </section>
       <section>
-        <h2 className="text-center text-4xl font-medium py-4">Get Started!</h2>
+        <h2 className="text-center text-4xl font-normal my-10">Get Started!</h2>
         <p className="text-center text-lg py-2 px-2">
           Head over to our pricing page to view the packages we are currently
           offering.

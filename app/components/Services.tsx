@@ -17,7 +17,7 @@ export const Services = () => {
     },
     {
       title: "Business Tour",
-      info: "Show off your business, bring in customers and attact new hires!",
+      info: "Bring in customers and attact new hires!",
       img: {
         src: Icon_Business,
         alt: "business icon",
@@ -25,7 +25,7 @@ export const Services = () => {
     },
     {
       title: "Event",
-      info: "Show amazing highlights from your event",
+      info: "Show highlights and capture memories from your event!",
       img: {
         src: Icon_Event,
         alt: "event icon",
@@ -33,7 +33,7 @@ export const Services = () => {
     },
     {
       title: "Custom Projects",
-      info: "Need Aerial shots of your custom project? Whe are here to help!",
+      info: "Need Aerial shots of your custom project? We're to help!",
       img: {
         src: Icon_Project,
         alt: "project icon",
@@ -46,11 +46,11 @@ export const Services = () => {
       {servicesOffered.map((service) => (
         <div
           key={service.title}
-          className="border border-black/30 flex flex-col justify-center items-center rounded-lg w-60 py-4 shadow-lg"
+          className="border border-black/30 flex flex-col justify-around items-center rounded-lg w-60 py-4 shadow-lg space-y-2"
         >
           <Image src={service.img.src} alt={service.img.alt} />
-          <h1 className="text-xl font-semibold">{service.title}</h1>
-          <p className="text-center">{service.info}</p>
+          <h1 className="text-2xl font-semibold">{service.title}</h1>
+          <p className="text-center text-lg">{service.info}</p>
         </div>
       ))}
     </ul>
