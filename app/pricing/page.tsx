@@ -18,6 +18,7 @@ export default function Pricing() {
       subtitle: "Basic",
       price: "$299",
       features: [
+        "List your House",
         "Interior Video Tour",
         "Exterior Aerial Photos",
         "Same Day Delivery",
@@ -42,7 +43,6 @@ export default function Pricing() {
       price: "$699",
       features: [
         "Market Your Business",
-        "Attract New Employees",
         "1-4 Minute Video",
         "Businesses, Restaurants, Golf Course",
         "Golf Courses, Stores, Etc.",
@@ -69,11 +69,12 @@ export default function Pricing() {
         "Multiple Day Project?",
         "Personal Aerial Photos/Videos?",
         "Construction Projects?",
+        "Special Location?",
       ],
     },
   ]
   return (
-    <div className="pt-16 bg-gradient-to-r bg-gray-200 min-h-screen overflow-x-hidden">
+    <div className="pt-16 bg-gradient-to-tr from-stone-200 to-gray-300 min-h-screen overflow-x-hidden">
       <h1 className="text-center text-4xl mt-10 font-semibold">
         Choose your Package
       </h1>
@@ -84,7 +85,7 @@ export default function Pricing() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {PricingCards.map((card) => (
             <Card
-              id={card.id}
+              key={card.id}
               title={card.title}
               subtitle={card.subtitle}
               features={card.features}
@@ -93,7 +94,7 @@ export default function Pricing() {
           ))}
         </div>
       </div>
-      <section className="flex justify-center space-x-2 text-xl my-10">
+      <section className="flex justify-center space-x-2 text-2xl my-16">
         <p className="font-semibold">Got Questions?</p>
         <p>
           Visit our{" "}

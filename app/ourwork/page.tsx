@@ -24,7 +24,7 @@ export default function Ourwork() {
     },
   ]
   return (
-    <div className="pt-16 bg-gradient-to-tr from-gray-300 to-stone-300 min-h-screen">
+    <div className="pt-16 bg-gradient-to-tr from-stone-200 to-gray-300 min-h-screen">
       <h1 className="text-center text-4xl mt-10 mb-5 font-semibold">
         Our Work
       </h1>

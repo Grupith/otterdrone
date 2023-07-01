@@ -3,10 +3,11 @@ import droneVideo from "../public/assets/droneVideo.mp4"
 import Link from "next/link"
 import VideoPlayer from "./components/VideoPlayer"
 import { FaCheckSquare } from "react-icons/fa"
+import { Services } from "./components/Services"
 
 const Home = () => {
   return (
-    <main className="min-h-screen pt-20 bg-gradient-to-r from-white to-stone-200">
+    <main className="min-h-screen pt-20 bg-gradient-to-tr from-stone-200 to-gray-300">
       <section className="text-center text-xl">
         <h1 className="text-4xl font-light py-10">
           Drone Photography & Videography
@@ -19,20 +20,7 @@ const Home = () => {
         <h2 className="text-center text-4xl font-medium py-4">
           Services We Offer
         </h2>
-        <ul className="flex flex-col items-center justify-center text-xl font-light space-y-5 sm:flex-row sm:space-x-5 sm:items-end">
-          <li className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-8 rounded-lg shadow-md">
-            Real Estate
-          </li>
-          <li className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-8 rounded-lg shadow-md">
-            Company Projects/Tours
-          </li>
-          <li className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-8 rounded-lg shadow-md">
-            Public/Private Events
-          </li>
-          <li className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-8 rounded-lg shadow-md">
-            Custom Projects
-          </li>
-        </ul>
+        <Services />
       </section>
       <section className="pb-4">
         <h2 className="text-center text-4xl font-medium mt-6">

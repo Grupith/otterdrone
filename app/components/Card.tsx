@@ -2,7 +2,6 @@ import React from "react"
 import { IoCheckmarkSharp } from "react-icons/io5"
 
 interface CardProps {
-  id: string
   title: string
   subtitle: string
   price: string
@@ -10,17 +9,13 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({
-  id,
   title,
   subtitle,
   price,
   features,
 }) => {
   return (
-    <div
-      key={id}
-      className="border border-black/10 rounded-lg w-96 shadow-lg bg-gray-100"
-    >
+    <div className="border border-black/20 rounded-xl w-96 shadow-xl bg-gray-100">
       <div className="flex flex-col items-center justify-around space-y-4 py-4 h-full">
         <header className="space-y-1">
           <h2 className="text-center text-4xl font-normal">{title}</h2>
@@ -45,7 +40,7 @@ export const Card: React.FC<CardProps> = ({
           ))}
         </main>
         <div className="flex justify-center py-2">
-          <button className="text-lg text-white font-light rounded-md bg-gradient-to-tr from-blue-500 to-blue-600 py-1 px-10 hover:scale-105 transition-all">
+          <button className="text-lg shadow-lg text-white font-light rounded-md bg-gradient-to-tr from-blue-500 to-blue-600 py-1 px-10 hover:scale-105 transition-all">
             Start Package
           </button>
         </div>
